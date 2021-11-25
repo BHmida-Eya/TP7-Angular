@@ -1,0 +1,35 @@
+<div class="container">
+    <div>
+    <h2>Modifier un Realisateur :</h2>
+    </div>    
+    <form >
+
+
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label >ID Realisateur</label>
+    
+            <input readonly type="text" [(ngModel)]="currentRealisateur.idRealisateur" name="idRealisateur" class="form-control">
+    </div>
+    
+    
+    
+    <div class="col-sm-4 col-md-4 col-lg-4" >
+    <label >Nom Realisateur</label>
+    <input type="text"[(ngModel)]= "currentRealisateur.nomRealisateur" name="nomRealisateur" class="form-control">
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2">
+    <label >Prenom Realisateur</label>
+    <input type="text" [(ngModel)]= "currentRealisateur.Film " name="Film" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+    <label >Date de Creation </label>
+    <input type="date" [ngModel]= "currentRealisateur.dateCreation | date: 'yyyy-MM-dd'" (ngModelChange)=" currentRealisateur.dateCreation= $event" name="dateCreation" class="form-control">
+    </div>
+
+    <div class="mt-2">
+        <button type="submit" (click)="updateRealisateur()" class="btn btn-success">Modifier</button>
+    
+    </div>
+    </form>
+    
+    </div>

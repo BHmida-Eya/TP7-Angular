@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="card shadow mb-4">
+    <div class="card-body">
+    <table class="table table-striped">
+        <tr><th>Id</th><th>Nom</th> <th>Film</th> <th>Date Création</th> </tr>
+    <thead>
+    <tr>
+    <th>Liste de Realisateurs</th>
+    </tr>
+    </thead>
+    <tbody *ngFor="let realisateur of realisateurs">
+    
+    <tr >
+        <td>{{realisateur.idRealisateur}}</td>
+        <td>{{realisateur.nomRealisateur}}</td>
+        <td>{{realisateur.Film}}</td>
+        <td>{{realisateur.dateCreation | date:'dd/MM/yyyy'}}</td>
+        <td><a class="btn btn-danger" (click)="supprimerRealisateur(realisateur)">Supprimer</a></td>
+        <td><a class="btn btn-success" [routerLink]="['/updateRealisateur',realisateur.idRealisateur]">Modifier</a></td>
+
+    </tr>
+    </tbody>
+    
+    </table>
+    </div>
+    </div>
+    </div>

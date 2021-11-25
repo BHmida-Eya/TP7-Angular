@@ -1,0 +1,31 @@
+<div class="container">
+    <div>
+    <h2>Ajouter un Réalisateur :</h2>
+    </div>    
+    <form >
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label >ID Réalisateur</label>
+    
+            <input type="text" [(ngModel)]="newRealisateur.idRealisateur" name="idRealisateur" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4" >
+    <label >Nom Réalisateur</label>
+    <input type="text"[(ngModel)]= "newRealisateur.nomRealisateur" name="nomRealisateur" class="form-control">
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2">
+    <label >Nom Film</label>
+    <input type="text" [(ngModel)]= "newRealisateur.Film" name="Film" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+    <label >Date de publication</label>
+    <input type="date" [(ngModel)]= "newRealisateur.dateCreation" name="dateCreation" class="form-control">
+    </div>
+
+    <div class="mt-2">
+        <button type="submit" (click)="addRealisateur()" class="btn btn-success">Ajouter</button>
+ <h3>{{ message }}</h3>
+    
+    </div>
+    </form>
+    
+    </div>
